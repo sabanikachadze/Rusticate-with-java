@@ -3,10 +3,9 @@ import java.util.Scanner;
 
 public class Banking {
     private double balance = 0.0;
-    Scanner scanner = new Scanner(System.in);
+    static Scanner scanner = new Scanner(System.in);
 
 public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
     Banking account = new Banking(); // 👈 create object
 
     String userIn = "";
@@ -53,6 +52,7 @@ public static void main(String[] args) {
             scanner.nextLine();
         }
     }
+    scanner.close();
 }
 
 
@@ -79,5 +79,4 @@ public static void main(String[] args) {
         }else{
         System.out.println("You can't deposit negative amount!");}
     }
-
 }
