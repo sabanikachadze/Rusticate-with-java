@@ -64,17 +64,17 @@ public static void main(String[] args) {
         System.out.print("Enter amount : ");
         amount = scanner.nextDouble();
         scanner.nextLine();
-        if (amount > 0 && amount <= balance) {
+        if (amount >= 0 && amount <= balance) {
             balance -= amount;
         }else{
-        System.out.println("You can't withdraw more than balance amount or 0!");}
+        System.out.println("Amount can't be more than balance or negative!");}
     }
 
     public void deposit(double amount) {
         System.out.print("Enter amount : ");
         amount = scanner.nextDouble();
         scanner.nextLine();
-        if (amount > 0) {
+        if (amount >= 0) {
             balance += amount;
         }else{
         System.out.println("You can't deposit negative amount!");}
